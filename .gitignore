@@ -1,0 +1,45 @@
+.vscode
+
+##
+# Builds
+#
+builds/
+
+##
+# Configs
+#
+.env*
+*root_configs*.lua
+configs_*.lua
+!configs_*example.lua
+deploy.config.ts
+
+##
+# JWKs
+#
+keys/
+!keys/.gitkeep
+*.key.json
+wallet.json
+
+##
+# LuaRocks
+#
+*.tmp.lua/luarocks
+/lua
+/lua_modules
+/.luarocks
+/luarocks
+
+##
+# Node
+#
+node_modules
+
+##
+# Temporary files
+#
+tmp/
+*.tmp.*
+
+history/*

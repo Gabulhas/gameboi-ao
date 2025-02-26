@@ -1,0 +1,38 @@
+{
+  "name": "quantum-ao",
+  "version": "0.15.0",
+  "private": true,
+  "scripts": {
+    "generate": "./scripts/bash/generate",
+    "process": "./scripts/bash/process",
+    "gbc:upload_rom": "tsx ./scripts/ts/upload_rom.ts",
+    "gbc:get_screen": "tsx ./scripts/ts/get_screen.ts",
+    "gbc:app": "tsx ./app/index.ts",
+    "link:astropacks-aostandard": "pnpm link --global @astro-protocol/astropacks-aostandard",
+    "test": "dotenvx run -f .env.tests -- busted -v src",
+    "test:watch": "dotenvx run -f .env.tests -- nodemon -e lua -x 'busted src || echo \"\n[Test Fail]\"'"
+  },
+  "devDependencies": {
+    "@astro-protocol/astropacks-aostandard": "0.8.0",
+    "@dotenvx/dotenvx": "1.x",
+    "@permaweb/aoconnect": "^0.0.53",
+    "@types/express": "^5.0.0",
+    "@types/node": "~20.12.14",
+    "ao-deploy": "~0.5.0",
+    "arweave": "~1.15.5",
+    "commander": "^12.1.0",
+    "dotenv": "~16.4.5",
+    "env-cmd": "~10.1.0",
+    "nodemon": "~3.1.7",
+    "tsx": "~4.19.1",
+    "typescript": "5.4.5"
+  },
+  "engines": {
+    "node": ">=20"
+  },
+  "dependencies": {
+    "esbuild": "^0.25.0",
+    "express": "^4.21.2",
+    "sharp": "^0.33.5"
+  }
+}
