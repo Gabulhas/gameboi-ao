@@ -1,0 +1,8 @@
+build/
+*.gbc
+*.gb
+*.bmp
+*.sav
+*.iso
+tests/
+callgraph.svg
